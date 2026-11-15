@@ -1,0 +1,16 @@
+name: Simple CI
+
+on:
+  push:
+    branches: [ "main" ] # Запускать при пуше в ветку main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Запускаем на виртуальной машине с Ubuntu
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Say Hello
+      run: echo "Hello CI"
